@@ -21,14 +21,18 @@ h1Elm.innerText = makePageForEpisodes(episodeList);
 console.log(makePageForEpisodes(episodeList));
 
 
-//styling 
-document.body.style.backgroundColor = "grey";
 
-rootElem.style.border = "200px solid red";
-h1Elm.style.border = "15px solid yellow";
-pElm.style.border = "5px solid pink";
 
 }
+
+/*
+construct one container with three divs
+div1 - holds all divs
+divEpisodeName - h1
+divImage - src
+divParagraph - p
+
+*/ 
 
 
 
