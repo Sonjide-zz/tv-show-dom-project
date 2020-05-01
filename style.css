@@ -1,8 +1,56 @@
-body {
-  background-color: rgba(172, 178, 181, 0.591);
-  padding: 30px;
+* {
+  box-sizing: border-box;
 }
 
-#root {
-  color: red;
+body {
+  background-color: rgba(172, 178, 181, 0.591);
+  font-family: "Lucida Sans", sans-serif;
+  padding: 15px;
 }
+
+
+/* container for one episode */
+.episode {
+  background-color: white;
+  border-radius: 5px;
+  border: 10px;
+  text-align: justify;
+
+}
+/* (Name,Season, Number, Episode, Number) or episodeTitle with grey border*/
+.episodeTitle {
+border: solid;
+border-color: rgb(90, 94, 94);
+border-radius: 5px;
+height: 80px;
+text-align: center;
+}
+
+.imageUrl {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+  /* Small and above */
+  
+  @media (min-width: 576px) {
+    .sm-col-4 {
+      width: 33.333333%;
+    }
+  }
+
+/* 
+The aim is to replicate the level 100 with html and css and then go to the next level
+resources 
+https://github.com/samanthaming/Flexbox30
+https://github.com/billfienberg/flexbox-froggy
+https://css-tricks.com/almanac/properties/j/justify-content/
+
+grid system
+https://github.com/CodeYourFuture/simple-grid
+https://rachelandrew.co.uk/archives/2016/03/30/should-i-use-grid-or-flexbox/
+https://gridbyexample.com/examples/
+https://www.youtube.com/watch?v=jV8B24rSN5o
+*/
+
