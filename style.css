@@ -1,34 +1,45 @@
-* {
-  box-sizing: border-box;
-}
-
 body {
-  background-color: rgba(172, 178, 181, 0.591);
-  font-family: "Lucida Sans", sans-serif;
-  padding: 15px;
+    background-color: rgba(172, 178, 181, 0.591);
+    font-family: "Lucida Sans", sans-serif;
+    box-sizing: border-box;
+    margin: 5px;
+    padding: 5px;
 }
 
 
 /* container for one episode */
-.episode {
-  background-color: white;
-  border-radius: 5px;
-  border: 10px;
-  text-align: justify;
 
-/* (Name,Season, Number, Episode, Number) or episodeTitle with grey border*/
-.episodeTitle {
-border: solid;
-border-color: rgb(90, 94, 94);
-border-radius: 5px;
-height: 80px;
-text-align: center;
+
+/* .episodeList { */
+
+
+/* border-radius: 5px; */
+
+
+/* text-align: justify; */
+
+
+/* } */
+
+.episode {
+    border-radius: 5px;
+    margin: 5px;
+    padding: 5px;
+    background-color: white;
+    width: 100%;
+    height: auto;
 }
 
-.imageUrl {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
+
+/* (Name,Season, Number, Episode, Number) or episodeTitle with grey border*/
+
+.episodeTitle {
+    border: solid;
+    border-color: rgb(90, 94, 94);
+    border-radius: 5px;
+    height: 80px;
+    text-align: center;
+    margin: 5px;
 }
 
 
@@ -46,3 +57,5 @@ https://gridbyexample.com/examples/
 https://www.youtube.com/watch?v=jV8B24rSN5o
 */
 
+tps: //www.youtube.com/watch?v=jV8B24rSN5o
+*/
