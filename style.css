@@ -16,7 +16,6 @@ body {
   border: 10px;
   text-align: justify;
 
-}
 /* (Name,Season, Number, Episode, Number) or episodeTitle with grey border*/
 .episodeTitle {
 border: solid;
@@ -32,13 +31,6 @@ text-align: center;
   margin-right: auto;
 }
 
-  /* Small and above */
-  
-  @media (min-width: 576px) {
-    .sm-col-4 {
-      width: 33.333333%;
-    }
-  }
 
 /* 
 The aim is to replicate the level 100 with html and css and then go to the next level
