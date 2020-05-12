@@ -42,7 +42,7 @@ function makePageForEpisodes(episodeList) {
         console.log(episode);
 
         //concatinate title - S01E01
-        let epiSeasonNumber = `${episode.name} - 0S${episode.season}E0${episode.number }`;
+        let epiSeasonNumber = `${episode.name} - S0${episode.season}E0${episode.number }`;
         console.log(epiSeasonNumber);
 
         let image = episode.image.medium;
