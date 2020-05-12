@@ -58,28 +58,19 @@ divParagraph.appendChild(movieContent);
 
 }
 
-/*
 -need a grey background - css
-
 -div contains several divs to allow more control, setting a min-width, using css grid - 12/4 = 3md class
 -construct one container with three divs
 rootDiv holds all the divs, elements, movie info
 divEpisodeName              - h1      - ${episode name + number} 
 divImage                    - img   - url
 divParagraph                - p       - paragraph
-//
+
 Q: How do I get the object.values into an array ?
 .... from a function without a name?
 Use repl.
 forEach
  
-*/ 
-
-
-
-
-
-
-window.onload = setup;
-
+https: //www.javascripttutorial.net/es6/javascript-template-literals/
+https://www.youtube.com/watch?v=YsPqjYGauns&t=928s 
 

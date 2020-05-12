@@ -17,47 +17,45 @@ Your page should state somewhere that the data has (originally) come from TVMaze
 ************** read it line by line, what is each line doing exactly ****************
 */
 
+const rootElem = document.getElementById("root");
+
+const template = `<div class="episode col-4">
+                <div class="episodeTitle">
+                    <h5>Winter is Coming - S01E01</h5>
+                </div>
+                <div class="imageUrl">
+                    <img src="image">
+                </div>
+                <div class="summery">
+                    <p>summery</p>
+                </div>
+            </div>`;
 
 function setup() {
-  const allEpisodes = getAllEpisodes();
-  makePageForEpisodes(allEpisodes);
+    const allEpisodes = getAllEpisodes();
+    makePageForEpisodes(allEpisodes);
 }
 
 function makePageForEpisodes(episodeList) {
-  const rootElem = document.getElementById("root");
-  // let episodetitle = document.getElementsByClassName("title");
-  // let image = document.getElementsByClassName("imageUrl");
-  // let paragraph= document.getElementsByClassName("paragraph");
-  // let h1 = document.getElementsByClassName("h1");
 
-  // rootElem.appendChild(h1Elm);
-  // rootElem.appendChild(pElm); 
+    episodeList.forEach(episode => {
+        console.log(episode);
 
-  //rootElem.textContent = `Got ${episodeList.length} episode(s)`;
+        //concatinate title - S01E01
+        let epiSeasonNumber = `${episode.name} - 0S${episode.season}E0${episode.number }`;
+        console.log(epiSeasonNumber);
 
+        let image = episode.image.medium;
+        console.log(image);
 
-// h1Elm.innerText = makePageForEpisodes(episodeList); 
-// console.log(makePageForEpisodes(episodeList));
+        //episode summary - remove all the <p></p> tags inside the text
+        //source - https://css-tricks.com/snippets/javascript/strip-html-tags-in-javascript/
+        let summary = episode.summary.replace(/(<([^>]+)>)/ig, "");
+        console.log(summary);
 
+    });
 
-//styling 
-// document.body.style.backgroundColor = "grey";
-
-// rootElem.style.border = "200px solid red";
-// h1Elm.style.border = "15px solid yellow";
-// pElm.style.border = "5px solid pink";
-
-// }
+};
 
 
-
-
-
-
-// window.onload = setup;
-/*need a grey background - css
-div contains several divs following
-- <h1> episode info, 
-- src = image 
-- p tag movie info
-*/
+window.onload = setup;
