@@ -15,16 +15,12 @@ Your page should state somewhere that the data has (originally) come from TVMaze
 ************** read it line by line, what is each line doing exactly ****************
 */
 
-
-
-
 function setup() {
     const allEpisodes = getAllEpisodes();
     makePageForEpisodes(allEpisodes);
 }
 
 function makePageForEpisodes(episodeList) {
-
 
     //this find the id that equal root which empty div in html
     const rootElem = document.getElementById("root");
