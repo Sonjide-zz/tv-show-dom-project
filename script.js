@@ -27,25 +27,27 @@ function setup() {
 
 function makePageForEpisodes(episodeList) {
 
+
+    //this find the id that equal root which empty div in html
     const rootElem = document.getElementById("root");
 
     episodeList.forEach(episode => {
-        console.log(episode);
+        //console.log(episode);
 
         //concatinate title - S01E01
-        let epiSeasonNumber = `${episode.name} - S0${episode.season}E0${episode.number }`;
-        //console.log(epiSeasonNumber);
+        const epiSeasonNumber = `${episode.name} - S0${episode.season}E0${episode.number }`;
+        console.log(epiSeasonNumber);
 
-        let image = episode.image.medium;
-        //console.log(image);
+        const image = episode.image.medium;
+        console.log(image);
 
         //episode summary - remove all the <p></p> tags inside the text
         //source - https://css-tricks.com/snippets/javascript/strip-html-tags-in-javascript/
-        let summary = episode.summary.replace(/(<([^>]+)>)/ig, "");
-        //console.log(summary);
+        const summary = episode.summary.replace(/(<([^>]+)>)/ig, "");
+        console.log(summary);
 
         const template = `<div class="episode col-4">
-                <div class="episodeTitle&Season">
+                <div class="episodeTitleAndSeason">
                     <h5>${epiSeasonNumber}</h5>
                 </div>
                 <div class="imageUrl">
@@ -55,15 +57,11 @@ function makePageForEpisodes(episodeList) {
                     <p>${summary}</p>
                 </div>
             </div>`;
-        //console.log(root.innerHTML.template);
 
-        root.innerHTML = template;
         //innerHTML   https://developer.mozilla.org/en-US/docs/Web/API/ShadowRoot/innerHTML
-        // https://gist.github.com/poopsplat/7195274
-
+        console.log(rootElem.innerHTML)
+        rootElem.innerHTML = rootElem.innerHTML + template;
     });
-
-
 };
 
 
