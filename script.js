@@ -20,16 +20,18 @@ Your page should state somewhere that the data has (originally) come from TVMaze
 const rootElem = document.getElementById("root");
 
 const template = `<div class="episode col-4">
-                <div class="episodeTitle">
-                    <h5>Winter is Coming - S01E01</h5>
+                <div class="episodeTitle&Season">
+                    <h5>epiSeasonNumber</h5>
                 </div>
                 <div class="imageUrl">
-                    <img src="image">
+                    <img src=image>
                 </div>
-                <div class="summery">
-                    <p>summery</p>
+                <div class="summary">
+                    <p>summary</p>
                 </div>
             </div>`;
+
+console.log(template);
 
 function setup() {
     const allEpisodes = getAllEpisodes();
@@ -39,19 +41,19 @@ function setup() {
 function makePageForEpisodes(episodeList) {
 
     episodeList.forEach(episode => {
-        console.log(episode);
+        //console.log(episode);
 
         //concatinate title - S01E01
         let epiSeasonNumber = `${episode.name} - S0${episode.season}E0${episode.number }`;
-        console.log(epiSeasonNumber);
+        //console.log(epiSeasonNumber);
 
         let image = episode.image.medium;
-        console.log(image);
+        //console.log(image);
 
         //episode summary - remove all the <p></p> tags inside the text
         //source - https://css-tricks.com/snippets/javascript/strip-html-tags-in-javascript/
         let summary = episode.summary.replace(/(<([^>]+)>)/ig, "");
-        console.log(summary);
+        //console.log(summary);
 
     });
 
