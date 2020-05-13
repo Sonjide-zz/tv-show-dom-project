@@ -17,21 +17,8 @@ Your page should state somewhere that the data has (originally) come from TVMaze
 ************** read it line by line, what is each line doing exactly ****************
 */
 
-const rootElem = document.getElementById("root");
 
-const template = `<div class="episode col-4">
-                <div class="episodeTitle&Season">
-                    <h5>epiSeasonNumber</h5>
-                </div>
-                <div class="imageUrl">
-                    <img src=image>
-                </div>
-                <div class="summary">
-                    <p>summary</p>
-                </div>
-            </div>`;
 
-console.log(template);
 
 function setup() {
     const allEpisodes = getAllEpisodes();
@@ -40,8 +27,10 @@ function setup() {
 
 function makePageForEpisodes(episodeList) {
 
+    const rootElem = document.getElementById("root");
+
     episodeList.forEach(episode => {
-        //console.log(episode);
+        console.log(episode);
 
         //concatinate title - S01E01
         let epiSeasonNumber = `${episode.name} - S0${episode.season}E0${episode.number }`;
@@ -55,7 +44,25 @@ function makePageForEpisodes(episodeList) {
         let summary = episode.summary.replace(/(<([^>]+)>)/ig, "");
         //console.log(summary);
 
+        const template = `<div class="episode col-4">
+                <div class="episodeTitle&Season">
+                    <h5>${epiSeasonNumber}</h5>
+                </div>
+                <div class="imageUrl">
+                    <img src=${image}>
+                </div>
+                <div class="summary">
+                    <p>${summary}</p>
+                </div>
+            </div>`;
+        //console.log(root.innerHTML.template);
+
+        root.innerHTML = template;
+        //innerHTML   https://developer.mozilla.org/en-US/docs/Web/API/ShadowRoot/innerHTML
+        // https://gist.github.com/poopsplat/7195274
+
     });
+
 
 };
 
