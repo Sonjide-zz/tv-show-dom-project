@@ -25,6 +25,15 @@ function makePageForEpisodes(episodeList) {
     //this find the id that equal root which empty div in html
     const rootElem = document.getElementById("root");
 
+    //attach a div with class of container to the child of the root element
+    const containerElm = document.createElement("div");
+    containerElm.classList.add("container");
+    rootElem.appendChild(containerElm);
+    //then attach another div with a class of "ROW" to the container element
+    const rowElm = document.createElement("div");
+    rowElm.classList.add("row");
+    containerElm.appendChild(rowElm);
+
     episodeList.forEach(episode => {
         //console.log(episode);
 
@@ -38,10 +47,9 @@ function makePageForEpisodes(episodeList) {
         //episode summary - remove all the <p></p> tags inside the text using regex snippet
         //source - https://css-tricks.com/snippets/javascript/strip-html-tags-in-javascript/
         const summary = episode.summary.replace(/(<([^>]+)>)/ig, "");
-        console.log(summary);
-
-        const template = `<div class="episode col-4">
-                <div class="episodeTitleAndSeason">
+        console.log(summary); 
+        const template = `<div class="episodeDiv col-4">
+                <div class="episodeTitle">
                     <h5>${epiSeasonNumber}</h5>
                 </div>
                 <div class="imageUrl">
@@ -52,9 +60,11 @@ function makePageForEpisodes(episodeList) {
                 </div>
             </div>`;
 
-        //innerHTML   https://developer.mozilla.org/en-US/docs/Web/API/ShadowRoot/innerHTML
-        rootElem.innerHTML = rootElem.innerHTML + template;
-        //console.log(rootElem.innerHTML);
+        //then we are going to use the row element instead of the root element
+        rowElm.innerHTML = rowElm.innerHTML + template;
+        //console.log(rowElm.innerHTML);
+        //innerHTML -  https://developer.mozilla.org/en-US/docs/Web/API/ShadowRoot/innerHTML
+
     });
 };
 
