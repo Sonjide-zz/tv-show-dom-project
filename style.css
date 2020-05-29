@@ -38,10 +38,15 @@ body {
 .imageUrl img {
   width: 100%;
 }
-/* oh my god, we need to add overflow to whole div */
+/* oh my god, we need to add overflow to whole div for the text to stay within the container and it adds a scrollbar on the side for those affected containers with additional text.
+https://css-tricks.com/the-css-overflow-property/
+"Auto will show scrollbar if and only if the content overflows; but scroll will always show the scrollbar, whether the content is overflowing or not."
+from https://stackoverflow.com/questions/6689412/difference-between-html-overflow-auto-and-overflow-scroll
+*/
 .episodeDiv {
   overflow: auto;
 }
+
 /* 
 The aim is to replicate the level 100 with html and css and then go to the next level
 resources 
