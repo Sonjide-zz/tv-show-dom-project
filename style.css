@@ -1,50 +1,47 @@
 body {
-    background-color: rgba(172, 178, 181, 0.591);
-    font-family: "Lucida Sans", sans-serif;
-    box-sizing: border-box;
-    margin: 5px;
-    padding: 5px;
+  background-color: rgba(172, 178, 181, 0.591);
+  font-family: "Lucida Sans", sans-serif;
+  box-sizing: border-box;
+  margin: 5px;
+  padding: 5px;
 }
-
 
 /* container for one episode */
 
-
 /* .episodeList { */
-
 
 /* border-radius: 5px; */
 
-
 /* text-align: justify; */
-
 
 /* } */
 
 .episodeDiv {
-    border-radius: 5px;
-    padding: 5px;
-    background-color: white;
-    height: auto;
+  border-radius: 5px;
+  padding: 5px;
+  background-color: white;
+  height: 420px;
+  margin: 15px;
 }
-
 
 /* (Name,Season, Number, Episode, Number) or episodeTitle with grey border*/
 
 .episodeTitle {
-    border: solid;
-    border-color: rgb(90, 94, 94);
-    border-radius: 5px;
-    height: 80px;
-    text-align: center;
-    margin: 5px;
+  border: solid;
+  border-color: rgb(90, 94, 94);
+  border-radius: 5px;
+  height: 80px;
+  text-align: center;
+  margin: 5px;
 }
 
 .imageUrl img {
-    max-width: 100%;
+  width: 100%;
 }
-
-
+/* oh my god, we need to add overflow to whole div */
+.episodeDiv {
+  overflow: auto;
+}
 /* 
 The aim is to replicate the level 100 with html and css and then go to the next level
 resources 
@@ -58,7 +55,6 @@ https://rachelandrew.co.uk/archives/2016/03/30/should-i-use-grid-or-flexbox/
 https://gridbyexample.com/examples/
 https://www.youtube.com/watch?v=jV8B24rSN5o
 */
-
 
 /*tps: //www.youtube.com/watch?v=jV8B24rSN5o
 */
