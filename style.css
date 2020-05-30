@@ -1,38 +1,27 @@
 body {
   background-color: rgba(172, 178, 181, 0.591);
-  font-family: "Lucida Sans", sans-serif;
-  box-sizing: border-box;
-  margin: 5px;
-  padding: 5px;
+  font-family: Arial, Helvetica, sans-serif, Lucida Sans;
 }
-
-/* container for one episode */
-
-/* .episodeList { */
-
-/* border-radius: 5px; */
-
-/* text-align: justify; */
-
-/* } */
-
+/* this is the container div for all the tv-content */
 .episodeDiv {
   border-radius: 5px;
-  padding: 5px;
   background-color: white;
   height: 420px;
-  margin: 15px;
+  padding: 5px;
+  margin: 5px;
+  overflow: auto;
 }
 
 /* (Name,Season, Number, Episode, Number) or episodeTitle with grey border*/
 
 .episodeTitle {
-  border: solid;
+  border: solid 3px;
   border-color: rgb(90, 94, 94);
   border-radius: 5px;
   height: 80px;
   text-align: center;
-  margin: 5px;
+  margin: 15px;
+  padding: 5px;
 }
 
 .imageUrl img {
@@ -43,9 +32,6 @@ https://css-tricks.com/the-css-overflow-property/
 "Auto will show scrollbar if and only if the content overflows; but scroll will always show the scrollbar, whether the content is overflowing or not."
 from https://stackoverflow.com/questions/6689412/difference-between-html-overflow-auto-and-overflow-scroll
 */
-.episodeDiv {
-  overflow: auto;
-}
 
 /* 
 The aim is to replicate the level 100 with html and css and then go to the next level
@@ -62,4 +48,3 @@ https://www.youtube.com/watch?v=jV8B24rSN5o
 */
 
 /*tps: //www.youtube.com/watch?v=jV8B24rSN5o
-*/

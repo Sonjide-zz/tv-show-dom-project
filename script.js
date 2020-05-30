@@ -21,14 +21,15 @@ function setup() {
 }
 
 function makePageForEpisodes(episodeList) {
-  //this find the id that equal root which empty div in html
+  //this find the id that equal root which empty div in index.html
   const rootElem = document.getElementById("root");
 
-  //attach a div with class of container to the child of the root element
+  //attach a div with class of flex-container to the child of the root element
   const containerElm = document.createElement("div");
+  //the parent "container" refers to grid.css container
   containerElm.classList.add("container");
   rootElem.appendChild(containerElm);
-  //then attach another div with a class of "ROW" to the container element
+  //then append another div called "row" from the grid.css which will use flex-box to display the tv-cards either in a row/column div
   const rowElm = document.createElement("div");
   rowElm.classList.add("row");
   containerElm.appendChild(rowElm);
@@ -63,6 +64,7 @@ function makePageForEpisodes(episodeList) {
             </div>`;
 
     //then we are going to use the row element instead of the root element
+    //rootElem.innerHTML = template;
     rowElm.innerHTML = rowElm.innerHTML + template;
     //console.log(rowElm.innerHTML);
     //innerHTML -  https://developer.mozilla.org/en-US/docs/Web/API/ShadowRoot/innerHTML
